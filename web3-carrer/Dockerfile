@@ -48,4 +48,5 @@ COPY . ./
 
 
 # Run the image.
+CMD npm run build
 CMD npm run start:prod --silent
