@@ -5,9 +5,11 @@ FROM apify/actor-node:16 AS builder
 
 # Copy just package.json and package-lock.json
 # to speed up the build using Docker layer cache.
+WORKDIR "/web3-carrer"
 COPY package*.json ./
 
 # Install all dependencies. Don't audit to speed up the installation.
+RUN cd 
 RUN npm install --include=dev --audit=false
 
 # Next, copy the source files using the user set
@@ -48,5 +50,4 @@ COPY . ./
 
 
 # Run the image.
-CMD npm run build
 CMD npm run start:prod --silent
