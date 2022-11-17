@@ -26,7 +26,7 @@ router.addHandler(labels.START, async ({ $, crawler }) => {
                     title: titleElement.first().text().trim(),
                     company: element.find('h3').first().text().trim(),
                     salaryRange: element.find('.text-salary').first().text().trim(),
-                    location: element.find('.job-location-mobile').first().text().trim()
+                    location: element.find('.job-location-mobile').first().text().trim(),
                 },
             },
         }]);
